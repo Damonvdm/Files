@@ -1,0 +1,9 @@
+@import "../../themes/dark.scss";
+
+.App 
+{
+	background-color: $primary-background-color;
+	color: $primary-foreground-color;
+	height: 100%;
+	width: 100%;
+}

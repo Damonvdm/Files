@@ -1,0 +1,29 @@
+@mixin flex($horizontal: center, $vertical: center, $isColumn: false)
+{
+    display: flex;
+    @if ($isColumn)
+    {
+        justify-content: $vertical;
+        align-items: $horizontal;
+    }
+    @else
+    {
+        justify-content: $horizontal;
+        align-items: $vertical;
+    }
+}
+
+@mixin inline-flex($horizontal: center, $vertical: center, $isColumn: false)
+{
+    @include flex($horizontal, $vertical, $isColumn);
+    display: inline-flex;
+}
+
+@mixin absolute-fill
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
